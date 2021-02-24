@@ -1,13 +1,15 @@
 package Strategy;
 
-public class RubberDuck extends Duck implements Quackable {
-    @Override
-    public void quack() {
-        System.out.println("Squeak.");
-    }
+import Strategy.flybehaviours.NoFly;
+import Strategy.quackbehaviour.Squeak;
 
+public class RubberDuck extends Duck {
+    public RubberDuck() {
+        flyBehaviour = new NoFly();
+        quackBehaviour = new Squeak();
+    }
     @Override
-    void display() {
+    public void display() {
         System.out.println("I look like RubberDuck.");
     }
 }

@@ -1,5 +1,7 @@
 package Strategy;
 
+import Strategy.flybehaviours.RocketSpeedFly;
+
 public class SimUDuck {
     public static void main(String... args) {
         Duck mDuck = new MallardDuck();
@@ -7,8 +9,17 @@ public class SimUDuck {
         Duck ruDuck = new RubberDuck();
 
         ruDuck.swim();
-        ruDuck.quack();
+        ruDuck.performQuack();
         ruDuck.display();
-        ruDuck.fly();
+        ruDuck.performFly();
+
+        System.out.println("----------------------");
+
+        ruDuck.setFlyBehaviour(new RocketSpeedFly());
+        ruDuck.performFly();
+
+        System.out.println("----------------------");
+        mDuck.performFly();
+        reDuck.performFly();
     }
 }
