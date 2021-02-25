@@ -1,10 +1,10 @@
-package observer.display;
+package jdkobserver.display;
 
-import observer.Subject;
+import java.util.Observable;
 
 public class CurrentConditionsDisplay extends Display {
 
-    public CurrentConditionsDisplay(Subject subject) {
+    public CurrentConditionsDisplay(Observable subject) {
         this.subject = subject;
     }
 

@@ -1,36 +1,23 @@
-package observer;
+package jdkobserver;
 
-import observer.display.CurrentConditionsDisplay;
-import observer.display.ForecastDisplay;
-import observer.display.PrivateDisplay;
-import observer.display.StatisticsDisplay;
 import observer.Observer;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Observable;
 
-public class WeatherData implements Subject {
+public class WeatherData extends Observable {
     private int temp;
     private int humidity;
     private int pressure;
-    private List<Observer> observers;
 
     public WeatherData() {
-        observers = new ArrayList<>();
-    }
 
-    @Override
-    public void registerObserver(Observer observer) {
-        observers.add(observer);
-    }
-
-    @Override
-    public void removeObserver(Observer observer) {
-        observers.remove(observer);
     }
 
     public void measurementsChanged() {
-        observers.forEach(observer -> observer.update(temp, humidity, pressure));
+        setChanged();
+        notifyObservers();
     }
 
     public void setTemp(int temp) {

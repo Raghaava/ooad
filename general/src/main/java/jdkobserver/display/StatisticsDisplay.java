@@ -1,10 +1,10 @@
-package observer.display;
+package jdkobserver.display;
 
-import observer.Subject;
+import java.util.Observable;
 
 public class StatisticsDisplay extends Display {
 
-    public StatisticsDisplay(Subject subject) {
+    public StatisticsDisplay(Observable subject) {
         this.subject = subject;
     }
 

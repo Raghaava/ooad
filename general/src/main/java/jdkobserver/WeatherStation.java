@@ -1,10 +1,11 @@
-package observer;
+package jdkobserver;
 
-import observer.display.CurrentConditionsDisplay;
-import observer.display.Display;
-import observer.display.ForecastDisplay;
-import observer.display.PrivateDisplay;
-import observer.display.StatisticsDisplay;
+
+import jdkobserver.display.CurrentConditionsDisplay;
+import jdkobserver.display.Display;
+import jdkobserver.display.ForecastDisplay;
+import jdkobserver.display.PrivateDisplay;
+import jdkobserver.display.StatisticsDisplay;
 
 public class WeatherStation {
     public static void main(String... args) {

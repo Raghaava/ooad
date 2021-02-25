@@ -1,10 +1,10 @@
-package observer.display;
+package jdkobserver.display;
 
-import observer.Subject;
+import java.util.Observable;
 
 public class ForecastDisplay extends Display {
 
-    public ForecastDisplay(Subject subject) {
+    public ForecastDisplay(Observable subject) {
         this.subject = subject;
     }
 

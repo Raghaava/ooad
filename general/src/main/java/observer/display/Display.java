@@ -1,9 +1,14 @@
 package observer.display;
 
-public abstract class Display {
+import observer.Observer;
+import observer.Subject;
+
+public abstract class Display implements Observer {
     protected int temp;
     protected int humidity;
     protected int pressure;
+
+    protected Subject subject;
 
     public void update(int temp, int humidity, int pressure) {
         this.temp = temp;
@@ -11,6 +16,14 @@ public abstract class Display {
         this.pressure = pressure;
 
         display();
+    }
+
+    public void subscribe() {
+        subject.registerObserver(this);
+    }
+
+    public void unsubscribe() {
+        subject.registerObserver(this);
     }
 
     public abstract void display();

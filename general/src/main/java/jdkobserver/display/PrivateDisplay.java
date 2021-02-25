@@ -1,10 +1,10 @@
-package observer.display;
+package jdkobserver.display;
 
-import observer.Subject;
+import java.util.Observable;
 
 public class PrivateDisplay extends Display {
 
-    public PrivateDisplay(Subject subject) {
+    public PrivateDisplay(Observable subject) {
         this.subject = subject;
     }
 
